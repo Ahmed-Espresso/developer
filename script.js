@@ -86,9 +86,9 @@ document.addEventListener('DOMContentLoaded', async () => {
   // 2) اظهر السبينر
   showSpinner();
 
-  // 3) تحميل الترجمات واللغة
-  await loadTranslations();
   initI18n();
+  await loadTranslations();
+  
   setLanguage(localStorage.getItem('lang') || 'ar');
 
   // زر تغيير اللغة
