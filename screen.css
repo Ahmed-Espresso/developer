@@ -1,0 +1,439 @@
+/* ────────────────────────────────────────────────── */
+/* 1) من 481px إلى 768px — أجهزة التابلت الصغيرة  */
+/* ────────────────────────────────────────────────── */
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  /* نجعل الأقسام أوسع قليلًا */
+  section {
+    margin: 3rem auto;
+    padding: 1rem 2rem;
+  }
+  /* تكبير العناوين */
+  section h1 {
+    font-size: 2.2rem;
+  }
+  /* نافبار */
+  #nav-btn {
+    padding: 1rem 1.5rem;
+    gap: 1rem;
+  }
+  #nav-btn button {
+    padding: 0.8rem 1.2rem;
+    font-size: 1rem;
+  }
+  /* بطاقات العرض */
+  .promo-card {
+    max-width: 80%;
+    padding: 2rem;
+  }
+  /* الشات */
+  .chat-container {
+    max-width: 80%;
+    height: 70vh;
+    padding: 1rem;
+  }
+  .chat-input {
+    font-size: 1rem;
+  }
+  .send-btn, .voice-btn {
+    font-size: 1.1rem;
+  }
+  /* البوتونات السريعة */
+  .welcome-btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 1.05rem;
+  }
+  /* البطاقات والقوائم */
+  #faqList, #skillsGrid {
+    gap: 0.5rem;
+  }
+  #faqList {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  }
+  #skillsGrid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  }
+  #servicesGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .projects-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+
+/* ────────────────────────────────────────────────── */
+/* 2) من 769px إلى 1024px — أجهزة التابلت الأكبر و iPad */
+/* ────────────────────────────────────────────────── */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  section {
+    margin: 4rem auto;
+    padding: 2rem 3rem;
+  }
+  section h1 {
+    font-size: 2.5rem;
+  }
+  #nav-btn {
+    gap: 2rem;
+    padding: 1rem 2rem;
+  }
+  #nav-btn button {
+    padding: 1rem 1.5rem;
+    font-size: 1.1rem;
+  }
+  .promo-card {
+    max-width: 60%;
+  }
+  .chat-container {
+    max-width: 60%;
+    height: 65vh;
+  }
+  .welcome-btn {
+    padding: 0.8rem 1.5rem;
+    font-size: 1.1rem;
+  }
+  .projects-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+  }
+}
+
+/* ────────────────────────────────────────────────── */
+/* 3) من 1025px إلى 1440px — أجهزة اللابتوب العادية  */
+/* ────────────────────────────────────────────────── */
+@media only screen and (min-width: 1025px) and (max-width: 1440px) {
+  section {
+    margin: 5rem auto;
+    padding: 2.5rem 4rem;
+  }
+  section h1 {
+    font-size: 3rem;
+  }
+  #nav-btn {
+    max-width: 1000px;
+  }
+  #nav-btn button {
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+  }
+  .promo-card {
+    max-width: 40%;
+  }
+  .chat-container {
+    max-width: 50%;
+    height: 60vh;
+  }
+  .welcome-btn {
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+  }
+  .projects-grid {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  }
+}
+
+/* ────────────────────────────────────────────────── */
+/* 4) أكبر من 1441px — الشاشات الكبيرة جداً (ديسكتوب) */
+/* ────────────────────────────────────────────────── */
+@media only screen and (min-width: 1441px) {
+  section {
+    margin: 6rem auto;
+    padding: 3rem 5rem;
+  }
+  section h1 {
+    font-size: 3.5rem;
+  }
+  #nav-btn {
+    max-width: 1200px;
+  }
+  #nav-btn button {
+    padding: 1.2rem 2.5rem;
+    font-size: 1.3rem;
+  }
+  .promo-card {
+    max-width: 30%;
+  }
+  .chat-container {
+    max-width: 40%;
+    height: 55vh;
+  }
+  .welcome-btn {
+    padding: 1.2rem 2.5rem;
+    font-size: 1.3rem;
+  }
+  .projects-grid {
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  }
+}
+
+@media only screen and (max-width: 480px) and (orientation: portrait) {
+  body{
+    padding:0;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  section h1 {
+    font-size:2rem ;
+    font-weight: bold;
+  }
+  section{
+    margin: 2rem auto;
+    padding:0.5rem;
+  }
+  #navsec {
+    padding: 0;
+  }
+  #nav-btn {
+    padding: 0.5rem 1rem; 
+  }
+  #nav-btn .nav-btn__item {
+    padding: 0.3rem 0.8rem;
+    font-size: 0.5rem;      
+    gap: 0.2rem;                
+  }
+  #nav-btn .nav-btn__item i {
+    font-size: 1.4rem; 
+  }
+  #nav-btn .nav-btn__item span {
+    font-size: 1rem;    
+  }
+  .typing-line {
+    font-size: 2rem;
+    letter-spacing: 2px;
+  }
+  .promo-card {
+    max-width: 90%;
+    padding: 15px;
+  }
+  #promoTitle{
+    font-size: 1.7rem;
+    position: relative;
+    top: -10px;
+  }
+  .discount-badge {
+    width: 60%;
+    font-size: 1.2rem;
+  }
+  .offer-countdown {
+    margin-top: 0.75rem;
+  }
+  .time-block {
+    gap: 8px;
+    padding: 10px 12px;
+    align-items: baseline;  
+  }
+  .time-item span:first-child {
+    font-size: 2rem;
+    margin-bottom: -2px;
+  }
+  .time-label {
+    font-size: 1.2rem;
+    font-weight:600;
+    margin-top: -2px; 
+  }
+  .separator {
+    font-size: 2.1rem;
+    align-self: baseline; 
+    margin: 0 0.5rem;
+    align-self: baseline;     
+  }
+  .chat-container {
+    height: 80vh;
+    max-width: 90%;
+    border-radius: 1rem;
+    padding: 0.5rem;
+  }
+  .chat-header {
+    padding: 0.5rem;
+    gap: 0.5rem;
+  }
+  .bot-avatar {
+    width: 50px;
+    height: 50px;
+  }
+  .bot-info #bot-name {
+    font-size: 1.5rem;
+  }
+  .bot-status {
+    font-size: 1rem;
+  }
+  .chat-box {
+    padding: 0.5rem;
+    border-radius: 0.8rem;
+  }
+  .message {
+    max-width: 77%;
+    padding: 0.6rem;
+    font-size: 1rem;
+  }
+  .message.welcome {
+    padding: 0.75rem;
+  }
+  .chat-footer {
+    padding: 0.3rem 0.3rem;
+  }
+  .chat-input {
+    padding: 0.8rem 2rem;
+    font-size: 0.9rem;
+    margin-bottom: -15px;
+  }
+  .send-btn,
+  .voice-btn {
+    font-size: 1rem;
+    top: 50%;
+  }
+  .chat-box::-webkit-scrollbar {
+    width: 4px;
+  }
+   .message.bot h3 {
+    font-size: 1.5rem;
+    margin: 0.2rem 0;  
+  }
+  .message.bot p {
+    font-size: 1rem;
+    margin: 0.2rem 0;  
+  }
+  .examples {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.2rem;
+    margin-top: 0.2rem;
+  }
+  .welcome-btn {
+    margin: 0.2rem 0.2rem;
+    padding: 0.4rem 0.8rem;
+    font-size: 1rem;
+  }
+  #faqList {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.2rem;
+  }
+  .faq-item .faq-btn i {
+    font-size: 1.5rem;
+    max-width: 100%;
+    line-height: 0.8;
+    margin-top:0.2rem;
+  }
+  .faq-btn span {
+    font-size: 1rem; 
+  }
+  #skillsGrid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.4rem;
+  }
+  .skill-item {
+    padding: 0.3rem;
+  }
+  .skill-item i {
+    font-size: 1.7rem;
+    max-width: 100%;
+  }
+  .skill-item h3 {
+    font-size: 1.2rem ; 
+  }
+  .skill-bar .skill-percent {
+    font-size: 1rem ; 
+  }
+  #servicesGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.2rem;
+  }
+  .services-item i {
+    font-size: 1.7rem;
+    max-width: 100%;
+    margin-bottom:0;
+  }
+  .services-item h3 {
+    font-size: 1.2rem ; 
+    margin-bottom:0;
+  }
+  .services-item .text-wrapper p {
+    font-size: 0.9rem ;
+    margin-bottom:0.3rem;
+    margin-top:0;
+  }
+  .contact-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.3rem;
+  }
+  .contact-card i {
+    font-size: 1.6rem;
+    margin:0.1rem 0;
+  }
+  .contact-card h3 {
+    font-size: 1rem ; 
+    margin-bottom: 0.1rem;
+  }
+  #statsGrid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.2rem;
+  }
+  .stats-item i {
+    font-size: 2rem;
+    max-width: 100%;
+  }
+  .stats-item p {
+    font-size: 1.7rem ; 
+  }
+  .stats-item h3 {
+    font-size: 1.5rem;
+  }
+  .portfolio-container {
+    padding: 1.5rem 0.75rem;
+  }
+  .port-head .title {
+    font-size: 2rem;
+    margin-top:1rem;
+  }
+  .port-head .subtitle {
+    font-size: 1.2rem;
+    opacity: 0.8;
+  }
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .project-card {
+    margin: 0 auto;
+  }
+  .card-title {
+    font-size: 1.7rem;
+  }
+  .rating {
+    font-size: 1.4rem;
+  }
+  .description {
+    font-size: 1.4rem;
+    margin: 0.4rem 0;
+  }
+  .tag {
+    padding: 0.2rem 0.3rem;
+    font-size: 1rem;
+  }
+  .card-footer {
+    padding: 0.2rem 0 0;
+  }
+  .price {
+    font-size: 1.5rem;
+  }
+  .view-button {
+    padding: 0.5rem 1.3rem;
+    font-size: 1.2rem;
+  }
+  .carousel-dots {
+    bottom: 0.5rem;
+  }
+  .carousel-dot {
+    width: 0.6rem;
+    height: 0.6rem;
+    margin: 0 0.2rem;
+  }
+  #global-toast {
+    bottom: 1rem;
+    padding: 0.6rem 1rem;
+  }
+}
