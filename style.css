@@ -4,6 +4,7 @@
   --color-warning:   #f39c12;
   --color-error:     #e74c3c;
   --color-info:      #3498db;
+  --vh: 1vh;
 }
 *, *::before, *::after {
   box-sizing: border-box;
@@ -14,7 +15,8 @@ body {
   line-height: 1.6;
   overflow-x: hidden;
   padding: 0;
-  min-height: 100vh;
+  height: 100dvh;
+  min-height: 100dvh;
   position: relative; 
   transition: background-color 3s ease, color 3s ease;
 }
@@ -230,7 +232,6 @@ section.visible {
   align-items: center;
 }
 .time-item span:first-child {
-  font-family: 'Orbitron', sans-serif;
   font-size: 2.8rem;
   font-weight: bold;
   color: var( --time-number-color,rgba(0,0,0,0.1));
@@ -259,8 +260,8 @@ section.visible {
 .chat-container {
   padding: 1rem;
   max-width: 600px;
-  height: 75vh;
   margin: 0 auto;
+  position: relative;
   border-radius: 1rem;
   display: flex;
   flex-direction: column;
@@ -284,6 +285,7 @@ section.visible {
   border-radius: 0 0 1rem 1rem;
   position: relative;
   box-sizing: border-box;
+  flex-shrink:0;
 }
 .bot-avatar {
   width: 60px;
@@ -330,6 +332,7 @@ section.visible {
   overflow-y: auto;
   background-color: black;
   border: 2px solid black;
+  min-height:480px;
 }
 .chat-box::-webkit-scrollbar {
   width: 8px;
@@ -411,6 +414,8 @@ section.visible {
   font-weight: bold;
   box-sizing: border-box;
   margin-bottom: -20px;
+  flex: 1;
+  max-height: 50px; 
 }
 .chat-input::placeholder {
   color: var(--input-placeholder-color,rgba(0,0,0,0.1));
@@ -1239,4 +1244,4 @@ section.visible {
   0%   { left: -100%; }
   5%   { left: 100%; }
   100% { left: 100%; }
-      }
+  }
