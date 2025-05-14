@@ -79,27 +79,20 @@ function hideSpinner() {
   }
 }
 
-
 document.addEventListener('DOMContentLoaded', async () => {
-  // 1) ابدأ التمرير من الأعلى
   window.scrollTo({ top: 0, behavior: 'auto' });
-  // 2) اظهر السبينر
+ 
   showSpinner();
-
   initI18n();
   await loadTranslations();
-  
   setLanguage(localStorage.getItem('lang') || 'ar');
 
-  // زر تغيير اللغة
-  document.getElementById('language-toggle').addEventListener('click', () => {
-    setLanguage(document.documentElement.lang === 'ar' ? 'en' : 'ar');
-  });
+  document.getElementById('language-toggle')
+    .addEventListener('click', () => {
+      setLanguage(document.documentElement.lang === 'ar' ? 'en' : 'ar');
+    });
 
-  // عند تغيير اللغة، أعد عرض جميع الأقسام
-  
-
-  document.addEventListener('languageChanged', async () => {    
+  document.addEventListener('languageChanged', async () => {
     renderWelcome(currentPromo?.welcomeMessage);
     initPromotions(currentPromo);
     renderPublicFAQs(currentFAQs);
@@ -119,10 +112,8 @@ document.addEventListener('DOMContentLoaded', async () => {
   (function() {
     const navbar = document.getElementById('navsec');
     let lastScrollY = window.pageYOffset;
-
     window.addEventListener('scroll', () => {
       const currentY = window.pageYOffset;
-
       if (currentY <= 0) {
         navbar.classList.remove('hide', 'show');
       } else if (currentY > lastScrollY) {
@@ -132,7 +123,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         navbar.classList.add('show');
         navbar.classList.remove('hide');
       }
-
       lastScrollY = currentY;
     });
   })();
@@ -144,16 +134,15 @@ document.addEventListener('DOMContentLoaded', async () => {
       }
     });
   }, { threshold: 0.1 });
-
   document.querySelectorAll('section').forEach(sec => {
     sectionObserver.observe(sec);
   });
 
-}); 
-
-
-
-
+  document.getElementById('toggle-home-btn')
+    .addEventListener('click', showHomeSection);
+  document.getElementById('toggle-projects-btn')
+    .addEventListener('click', showProjectsSection);
+});
 
 // ————— Load Data —————
 function loadInitialData() {
@@ -976,8 +965,3 @@ function showProjectsSection() {
     });
   }
 }
-
-document.getElementById('toggle-home-btn')
-  .addEventListener('click', showHomeSection);
-document.getElementById('toggle-projects-btn')
-  .addEventListener('click', showProjectsSection);
