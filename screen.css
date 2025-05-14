@@ -27,9 +27,11 @@
   }
   /* الشات */
   .chat-container {
-    max-width: 80%;
-    height: 70vh;
+    max-width: 900px;
     padding: 1rem;
+  }
+  .chat-box {
+    min-height:550px;
   }
   .chat-input {
     font-size: 1rem;
@@ -83,8 +85,10 @@
     max-width: 60%;
   }
   .chat-container {
-    max-width: 60%;
-    height: 65vh;
+    max-width: 700px;
+  }
+  .chat-box {
+    min-height: 500px;
   }
   .welcome-btn {
     padding: 0.8rem 1.5rem;
@@ -95,7 +99,6 @@
     gap: 2rem;
   }
 }
-
 /* ────────────────────────────────────────────────── */
 /* 3) من 1025px إلى 1440px — أجهزة اللابتوب العادية  */
 /* ────────────────────────────────────────────────── */
@@ -118,8 +121,10 @@
     max-width: 40%;
   }
   .chat-container {
-    max-width: 50%;
-    height: 60vh;
+    max-width: 900px;
+  }
+  .chat-box {
+    min-height: 650px;
   }
   .welcome-btn {
     padding: 1rem 2rem;
@@ -152,8 +157,10 @@
     max-width: 30%;
   }
   .chat-container {
-    max-width: 40%;
-    height: 55vh;
+   max-width: 900px;
+  }
+  .chat-box {
+    min-height: 600px;
   }
   .welcome-btn {
     padding: 1.2rem 2.5rem;
@@ -237,7 +244,6 @@
     align-self: baseline;     
   }
   .chat-container {
-    height: 80vh;
     max-width: 90%;
     border-radius: 1rem;
     padding: 0.5rem;
@@ -258,7 +264,8 @@
   }
   .chat-box {
     padding: 0.5rem;
-    border-radius: 0.8rem;
+    border-radius: 1rem;
+    max-height:480px;
   }
   .message {
     max-width: 77%;
@@ -436,4 +443,4 @@
     bottom: 1rem;
     padding: 0.6rem 1rem;
   }
-}
+    }
