@@ -39,7 +39,11 @@ let currentProjects= {};
 let currentQC      = {}; 
 let qcSettings = {};  
 let currentAbout   = {};
-let fuseBot, welcomeButtons = [], isListening = false, voiceAsked = false;
+let fuseBot,
+    welcomeButtons = [],
+    isListening    = false,
+    voiceAsked     = false;
+
 const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
 
 // ————— Helper Functions —————
@@ -352,12 +356,22 @@ function initVoiceRecognition() {
     sendBotMessage();
     isListening = false;
   };
-  
+
+  const voiceBtn = document.getElementById('voice-btn');
+  if (!voiceBtn) return;  // حارس بسيط
+
+  recognition.onstart = () => {
+    voiceBtn.classList.add('recording');
+  };
+  recognition.onend = () => {
+    voiceBtn.classList.remove('recording');
+    isListening = false;    // إعادة ضبط هنا للتوثيق
+  };
   recognition.onerror = () => {
     isListening = false;
   };
   
-  document.getElementById('voice-btn').onclick = () => {
+  voiceBtn.onclick = () => {
     if (!isListening) {
       recognition.start();
       isListening = true;
@@ -384,10 +398,12 @@ window.sendBotMessage = () => {
   box.scrollTop = box.scrollHeight;
 
   setTimeout(() => {
+    // إزالة مؤشر الكتابة
     box.querySelector('.typing-indicator').parentElement.remove();
+
+    // تحضير الرد
     let resp = '';
     const lower = txt.toLowerCase();
-
     const greetings = ['اهلا', 'مرحبا', 'هلا', 'السلام عليكم'];
     if (greetings.some(g => lower.includes(g))) {
       resp = translations['bot_reply_rewelcome']?.[currentLang()] ||
@@ -409,18 +425,20 @@ window.sendBotMessage = () => {
       }
     }
 
+    // عرض الرد كتابة
     box.innerHTML += `<div class="message bot">${resp}</div>`;
     box.scrollTop = box.scrollHeight;
 
+    // **هنا** نعرف لغة الـ TTS قبل الاستخدام
     if (voiceAsked) {
       const u = new SpeechSynthesisUtterance(resp);
-      u.lang = currentLang() === 'ar' ? 'ar-SA' : 'en-US';
+      const lang = currentLang();  // <— إضافتنا
+      u.lang = lang === 'ar' ? 'ar-SA' : 'en-US';
       speechSynthesis.speak(u);
       voiceAsked = false;
     }
   }, 600);
 };
-
 // ————— Typing effect for welcome message —————
 function renderWelcome(msg) {
   const lang = currentLang();
