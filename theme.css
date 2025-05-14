@@ -1,11 +1,9 @@
 @supports not (--custom: value) {
   body { background-color: #0d1b2a; color: white; }
 }
-
 html {
   visibility: hidden;
 }
-
 html.theme-night,
 html.theme-day,
 html.theme-wild,
@@ -35,7 +33,6 @@ canvas {
   pointer-events: none;
   z-index: -1;
   opacity: 0;
-  
   transition: opacity 6s ease;
 }
 .theme-night {
@@ -348,4 +345,4 @@ html.theme-coffee {
   --quickcontact-success-border: #fff3cc; /* بُوردر رسالة التأكيد */
   --quickcontact-success-text:#fff3cc ;/* لون نص رسالة التأكيد */
   --caard-color: rgba(0,0,0,0.2); /* لون نص رسالة التأكيد */
-}
+  }
