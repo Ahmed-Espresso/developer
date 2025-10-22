@@ -1,0 +1,2128 @@
+/* ────────────────────────────────────────────────── */
+/* screen.css - ملف تجاوب موحد وشامل لجميع الأجهزة */
+/* ────────────────────────────────────────────────── */
+
+/* ==================================================
+   1) من 320px إلى 480px - الهواتف الصغيرة
+================================================== */
+@media only screen and (max-width: 480px) and (orientation: portrait) {
+  body{
+    padding:0;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  section h1 {
+    font-size:2rem ;
+    font-weight: bold;
+  }
+  section{
+    margin: 2rem auto;
+    padding:0.5rem;
+  }
+  #navsec {
+    padding: 0;
+  }
+  #nav-btn {
+    padding: 0.5rem 1rem; 
+  }
+  #nav-btn .nav-btn__item {
+    padding: 0.3rem 0.8rem;
+    font-size: 0.5rem;      
+    gap: 0.2rem;                
+  }
+  #nav-btn .nav-btn__item i {
+    font-size: 1.4rem; 
+  }
+  #nav-btn .nav-btn__item span {
+    font-size: 1rem;    
+  }
+  
+  /* ────────── تحسينات قسم الترحيب ────────── */
+  #welcomeSection {
+    min-height: 15vh;
+    margin: 80px auto 1rem;
+    padding: 0.5rem;
+  }
+  
+  .welcome-text {
+    width: 95%;
+    max-width: 95%;
+    font-size: 1.8rem;
+    line-height: 1.3;
+    padding: 0.5rem 0;
+  }
+  
+  .typing-line {
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+    margin: 0.3rem 0;
+    line-height: 1.3;
+  }
+
+  .promo-card {
+    max-width: 90%;
+    padding: 15px;
+  }
+  #promoTitle{
+    font-size: 1.7rem;
+    position: relative;
+    top: -10px;
+  }
+  .discount-badge {
+    width: 60%;
+    font-size: 1.2rem;
+  }
+  .offer-countdown {
+    margin-top: 0.75rem;
+  }
+  .time-block {
+    gap: 8px;
+    padding: 10px 12px;
+    align-items: baseline;  
+  }
+  .time-item span:first-child {
+    font-size: 2rem;
+    margin-bottom: -2px;
+  }
+  .time-label {
+    font-size: 1.2rem;
+    font-weight:600;
+    margin-top: -2px; 
+  }
+  .separator {
+    font-size: 2.1rem;
+    align-self: baseline; 
+    margin: 0 0.5rem;
+    align-self: baseline;     
+  }
+  .chat-container {
+    max-width: 90%;
+    border-radius: 1rem;
+    padding: 0.5rem;
+  }
+  .chat-header {
+    padding: 0.5rem;
+    gap: 0.5rem;
+  }
+  .bot-avatar {
+    width: 50px;
+    height: 50px;
+  }
+  .bot-info #bot-name {
+    font-size: 1.5rem;
+  }
+  .bot-status {
+    font-size: 1rem;
+  }
+  .chat-box {
+    padding: 0.5rem;
+    border-radius: 1rem;
+    max-height:480px;
+  }
+  .message {
+    max-width: 77%;
+    padding: 0.6rem;
+    font-size: 1rem;
+  }
+  .message.welcome {
+    padding: 0.75rem;
+  }
+  .chat-footer {
+    padding: 0.3rem 0.3rem;
+  }
+  .chat-input {
+    padding: 0.8rem 2rem;
+    font-size: 0.9rem;
+    margin-bottom: -15px;
+  }
+  .send-btn,
+  .voice-btn {
+    font-size: 1rem;
+    top: 50%;
+  }
+  .chat-box::-webkit-scrollbar {
+    width: 4px;
+  }
+   .message.bot h3 {
+    font-size: 1.5rem;
+    margin: 0.2rem 0;  
+  }
+  .message.bot p {
+    font-size: 1rem;
+    margin: 0.2rem 0;  
+  }
+  .examples {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.2rem;
+    margin-top: 0.2rem;
+  }
+  .welcome-btn {
+    margin: 0.2rem 0.2rem;
+    padding: 0.4rem 0.8rem;
+    font-size: 1rem;
+  }
+  #faqList {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.2rem;
+  }
+  .faq-item .faq-btn i {
+    font-size: 1.5rem;
+    max-width: 100%;
+    line-height: 0.8;
+    margin-top:0.2rem;
+  }
+  .faq-btn span {
+    font-size: 1rem; 
+  }
+  
+  /* ────────── تقليل مسافات المهارات ────────── */
+    #skillsGrid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.2rem;
+  }
+  .skill-item {
+    padding: 0.3rem;
+  }
+  .skill-item i {
+    font-size: 1.7rem;
+    max-width: 100%;
+  }
+  .skill-item h3 {
+    font-size: 1.2rem ; 
+  }
+  .skill-bar .skill-percent {
+    font-size: 1rem ; 
+  }
+  
+  #servicesGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.2rem;
+  }
+  .services-item i {
+    font-size: 1.7rem;
+    max-width: 100%;
+    margin-bottom:0;
+  }
+  .services-item h3 {
+    font-size: 1.2rem ; 
+    margin-bottom:0;
+  }
+  .services-item .text-wrapper p {
+    font-size: 0.9rem ;
+    margin-bottom:0.3rem;
+    margin-top:0;
+  }
+  
+  /* ────────── تقليل مسافات التواصل ────────── */
+  .contact-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.1rem; /* تم تقليل المسافة بين بطاقات التواصل */
+  }
+  .contact-card {
+    padding: 0.3rem; /* تم تقليل الحشو الداخلي */
+    margin: 0.05rem; /* تم تقليل الهامش */
+  }
+  .contact-card i {
+    font-size: 1.7rem; /* تصغير حجم الأيقونات */
+    margin: 0 auto;
+  }
+  .contact-card h3 {
+    font-size: 0.9rem ; /* تصغير حجم النص */
+    margin-bottom: 0.05rem;
+  }
+  
+  #statsGrid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.2rem;
+  }
+  .stats-item i {
+    font-size: 2rem;
+    max-width: 100%;
+  }
+  .stats-item p {
+    font-size: 1.7rem ; 
+  }
+  .stats-item h3 {
+    font-size: 1.5rem;
+  }
+  .portfolio-container {
+    padding: 1.5rem 0.75rem;
+  }
+  .port-head .title {
+    font-size: 2rem;
+    margin-top:1rem;
+  }
+  .port-head .subtitle {
+    font-size: 1.2rem;
+    opacity: 0.8;
+  }
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .project-card {
+    margin: 0 auto;
+  }
+  .card-title {
+    font-size: 1.7rem;
+  }
+  .rating {
+    font-size: 1.4rem;
+  }
+  .description {
+    font-size: 1.4rem;
+    margin: 0.4rem 0;
+  }
+  .tag {
+    padding: 0.2rem 0.3rem;
+    font-size: 1rem;
+  }
+  .card-footer {
+    padding: 0.2rem 0 0;
+  }
+  .price {
+    font-size: 1.5rem;
+  }
+  .view-button {
+    padding: 0.5rem 1.3rem;
+    font-size: 1.2rem;
+  }
+  .carousel-dots {
+    bottom: 0.5rem;
+  }
+  .carousel-dot {
+    width: 0.6rem;
+    height: 0.6rem;
+    margin: 0 0.2rem;
+  }
+  #global-toast {
+    bottom: 1rem;
+    padding: 0.6rem 1rem;
+  }
+}
+
+/* ==================================================
+   2) من 481px إلى 768px — أجهزة التابلت الصغيرة والهواتف الكبيرة
+================================================== */
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  
+  /* ────────── تحسينات عامة ────────── */
+  body {
+    padding-top: 90px;
+  }
+  
+  /* ────────── قسم الترحيب ────────── */
+  #welcomeSection {
+    min-height: 18vh;
+    margin: 90px auto 1.5rem;
+    padding: 1rem;
+  }
+  
+  .welcome-text {
+    font-size: 2rem;
+    line-height: 1.4;
+    max-width: 90%;
+    padding: 1rem 0;
+  }
+  
+  .typing-line {
+    font-size: 2.2rem;
+    margin: 0.5rem 0;
+    line-height: 1.3;
+  }
+
+  /* نجعل الأقسام أوسع قليلًا */
+  section {
+    margin: 3rem auto;
+    padding: 1rem 2rem;
+  }
+  
+  /* تكبير العناوين */
+  section h1 {
+    font-size: 2.2rem;
+  }
+  
+  /* نافبار */
+  #navsec {
+    padding: 0.5rem 0;
+    margin-bottom: 4rem;
+  }
+  
+  #nav-btn {
+    padding: 1rem 1.5rem;
+    gap: 1rem;
+    max-width: 95%;
+  }
+  
+  #nav-btn button {
+    padding: 0.8rem 1.2rem;
+    font-size: 1rem;
+    min-width: 110px;
+  }
+  
+  #nav-btn button i {
+    font-size: 1.6rem;
+  }
+  
+  #nav-btn button span {
+    font-size: 1.4rem;
+  }
+  
+  /* بطاقات العرض */
+  .promo-card {
+    max-width: 80%;
+    padding: 2rem;
+  }
+  
+  #promoTitle {
+    font-size: 2rem;
+  }
+  
+  .discount-badge {
+    width: 50%;
+    font-size: 1.3rem;
+  }
+  
+  .time-block {
+    padding: 1.2rem 1.5rem;
+    gap: 1rem;
+  }
+  
+  .time-item span:first-child {
+    font-size: 2.2rem;
+  }
+  
+  /* الشات */
+  .chat-container {
+    max-width: 90%;
+    padding: 1rem;
+  }
+  
+  .chat-box {
+    min-height: 400px;
+  }
+  
+  .chat-input {
+    font-size: 1rem;
+  }
+  
+  .send-btn, .voice-btn {
+    font-size: 1.1rem;
+  }
+  
+  /* البوتونات السريعة */
+  .welcome-btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 1.05rem;
+  }
+  
+  /* البطاقات والقوائم */
+  #faqList, #skillsGrid {
+    gap: 0.4rem;
+  }
+  
+  #faqList {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+  
+  #skillsGrid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+  
+  #servicesGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  
+  .contact-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+  }
+  
+  #statsGrid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+  }
+  
+  .projects-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+}
+
+/* ==================================================
+   3) من 769px إلى 1024px — أجهزة التابلت الأكبر و iPad
+================================================== */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  
+  /* ────────── تحسينات عامة ────────── */
+  body {
+    padding-top: 100px;
+    font-size: 17px;
+  }
+  
+  /* ────────── قسم الترحيب ────────── */
+  #welcomeSection {
+    min-height: 20vh;
+    margin: 100px auto 2rem;
+    padding: 1.5rem;
+  }
+  
+  .welcome-text {
+    font-size: 2.3rem;
+    line-height: 1.4;
+    max-width: 85%;
+    padding: 1.5rem 0;
+  }
+  
+  .typing-line {
+    font-size: 2.5rem;
+    margin: 0.6rem 0;
+    line-height: 1.3;
+  }
+
+  section {
+    margin: 4rem auto;
+    padding: 2rem 3rem;
+  }
+  
+  section h1 {
+    font-size: 2.5rem;
+  }
+  
+  #navsec {
+    padding: 0.8rem 0;
+    margin-bottom: 5rem;
+  }
+  
+  #nav-btn {
+    gap: 2rem;
+    padding: 1rem 2rem;
+    max-width: 90%;
+  }
+  
+  #nav-btn button {
+    padding: 1rem 1.5rem;
+    font-size: 1.1rem;
+    min-width: 120px;
+  }
+  
+  #nav-btn button i {
+    font-size: 1.7rem;
+  }
+  
+  #nav-btn button span {
+    font-size: 1.5rem;
+  }
+  
+  .promo-card {
+    max-width: 60%;
+    padding: 2.5rem;
+  }
+  
+  #promoTitle {
+    font-size: 2.2rem;
+  }
+  
+  .discount-badge {
+    width: 45%;
+    font-size: 1.4rem;
+  }
+  
+  .time-block {
+    padding: 1.5rem 2rem;
+    gap: 1.2rem;
+  }
+  
+  .time-item span:first-child {
+    font-size: 2.5rem;
+  }
+  
+  .chat-container {
+    max-width: 80%;
+  }
+  
+  .chat-box {
+    min-height: 450px;
+  }
+  
+  .welcome-btn {
+    padding: 0.8rem 1.5rem;
+    font-size: 1.1rem;
+  }
+  
+  #faqList {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.2rem;
+  }
+  
+  #skillsGrid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.2rem;
+  }
+  
+  #servicesGrid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.2rem;
+  }
+  
+  .contact-grid {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1.2rem;
+  }
+  
+  #statsGrid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.2rem;
+  }
+  
+  .projects-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  
+  .portfolio-container {
+    padding: 2.5rem 2rem;
+  }
+  
+  .port-head .title {
+    font-size: 2.8rem;
+  }
+  
+  .port-head .subtitle {
+    font-size: 1.4rem;
+  }
+}
+
+/* ==================================================
+   4) من 1025px إلى 1366px — الشاشات الكبيرة واللاب توب
+================================================== */
+@media only screen and (min-width: 1025px) {
+  
+  /* ────────── تحسينات عامة ────────── */
+  body {
+    font-size: 18px;
+    line-height: 1.7;
+    padding-top: 120px;
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+  
+  /* تحسين التخطيط الرئيسي */
+  .main-sections-container {
+    display: grid;
+    grid-template-columns: 1fr minmax(1200px, 1400px) 1fr;
+    gap: 2rem;
+  }
+  
+  /* ────────── تحسينات النافبار ────────── */
+  #navsec {
+    padding: 1.5rem 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: transparent;
+    backdrop-filter: none;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0;
+    height: auto;
+  }
+  
+  /* إضافة مساحة محجوزة للنافبار */
+  body::before {
+    content: '';
+    display: block;
+    height: 120px; /* ارتفاع النافبار + مسافة إضافية */
+    width: 100%;
+  }
+  
+  #nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  
+  #nav-btn {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 1.2rem 2.5rem;
+    border-radius: 2rem;
+    background: var(--nav-bg);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    position: relative;
+    left: 0;
+    transform: none;
+  }
+  
+  #nav-btn button {
+    padding: 1.2rem 2rem;
+    font-size: 1.1rem;
+    border-radius: 1.5rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    min-width: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  #nav-btn button:hover {
+    transform: translateY(-3px) scale(1.05);
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  }
+  
+  #nav-btn button.active {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-2px);
+  }
+  
+  #nav-btn button i {
+    font-size: 1.8rem;
+    transition: transform 0.3s ease;
+  }
+  
+  #nav-btn button:hover i {
+    transform: scale(1.2);
+  }
+  
+  #nav-btn button span {
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+  }
+  
+  /* ────────── تحسينات قسم الترحيب ────────── */
+  #welcomeSection {
+    min-height: 25vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 2rem; /* مسافة مناسبة بعد النافبار */
+    padding: 2rem 1rem;
+    max-width: 1200px;
+  }
+  
+  .welcome-text {
+    font-size: 2.2rem;
+    line-height: 1.4;
+    max-width: 90%;
+    font-weight: 300;
+    margin: 0 auto;
+    padding: 2rem 0;
+  }
+  
+  .typing-line {
+    font-size: 2.5rem;
+    margin: 1rem 0;
+    letter-spacing: 1px;
+    font-weight: 400;
+    line-height: 1.3;
+  }
+  
+  /* ────────── الأقسام الرئيسية ────────── */
+  section {
+    margin: 3rem auto;
+    border-radius: 2rem;
+    max-width: 1300px;
+    box-shadow: none;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    background: var(--section-bg);
+    position: relative;
+  }
+  
+  section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, 
+      transparent, 
+      rgba(255, 255, 255, 0.1), 
+      transparent
+    );
+  }
+  
+  section h1 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    text-shadow: none;
+    background: linear-gradient(135deg, var(--h1-color), color-mix(in srgb, var(--h1-color) 70%, white));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 700;
+  }
+  
+  /* ────────── بطاقات العروض ────────── */
+  .promo-section {
+    text-align: center;
+  }
+  
+  .promo-card {
+    max-width: 500px;
+    padding: 2.5rem;
+    border-radius: 2rem;
+    margin: 0 auto;
+    box-shadow: none;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: var(--offer-bg);
+  }
+  
+  #promoTitle {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+  
+  .discount-badge {
+    font-size: 1.4rem;
+    padding: 0.8rem 1.5rem;
+    border-radius: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: none;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .time-block {
+    padding: 1.2rem 1.5rem;
+    border-radius: 1.5rem;
+    gap: 1.2rem;
+    box-shadow: none;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .time-item span:first-child {
+    font-size: 2.4rem;
+  }
+  
+  .time-label {
+    font-size: 0.9rem;
+  }
+  
+  .separator {
+    font-size: 1.8rem;
+  }
+  
+  /* ────────── الدردشة ────────── */
+  .chat-container {
+    max-width: 700px;
+    min-height: 500px;
+    border-radius: 2rem;
+    box-shadow: none;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    margin: 0 auto;
+  }
+  
+  .chat-box {
+    min-height: 350px;
+    padding: 1.5rem;
+  }
+  
+  .message {
+    max-width: 70%;
+    padding: 1rem 1.5rem;
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+  
+  .chat-input {
+    padding: 1rem 3rem;
+    font-size: 1.1rem;
+    border-radius: 2rem;
+  }
+  
+  /* ────────── الشبكات والبطاقات ────────── */
+  #skillsGrid,
+  #servicesGrid,
+  #contactGrid,
+  #statsGrid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .skill-item,
+  .services-item,
+  .contact-card,
+  .stats-item {
+    aspect-ratio: 1/1;
+    padding: 1.5rem;
+    border-radius: 1.5rem;
+    transition: all 0.3s ease;
+    box-shadow: none;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .skill-item:hover,
+  .services-item:hover,
+  .contact-card:hover,
+  .stats-item:hover {
+    transform: translateY(-5px) scale(1.02);
+    border-color: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.05);
+  }
+  
+  .skill-item i,
+  .services-item i,
+  .contact-card i,
+  .stats-item i {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .skill-item h3,
+  .services-item h3,
+  .contact-card h3,
+  .stats-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  /* ────────── قسم الأسئلة الشائعة ────────── */
+  #faqList {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.2rem;
+  }
+  
+  .faq-item .faq-btn {
+    padding: 1.2rem;
+    border-radius: 1.5rem;
+    transition: all 0.3s ease;
+    box-shadow: none;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .faq-item .faq-btn:hover {
+    transform: translateY(-3px);
+    border-color: rgba(255, 255, 255, 0.2);
+  }
+  
+  .faq-btn i {
+    font-size: 2rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .faq-btn span {
+    font-size: 1rem;
+    text-align: center;
+  }
+  
+  .answer-container {
+    padding: 1.5rem 2rem;
+    border-radius: 1.5rem;
+    margin-top: 1.5rem;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    box-shadow: none;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  /* ────────── قسم "من أنا" ────────── */
+  #aboutContent {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    padding: 0 1.5rem;
+    text-align: justify;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  /* ─────────ـ النماذج ────────── */
+  .quick-contact-form {
+    max-width: 600px;
+    padding: 1.5rem;
+    border-radius: 2rem;
+    margin: 0 auto;
+    box-shadow: none;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .quick-contact-form input,
+  .quick-contact-form textarea {
+    padding: 0.8rem 1.2rem;
+    font-size: 1rem;
+    border-radius: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.05);
+  }
+  
+  .qc-buttons button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 1rem;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.05);
+  }
+  
+  .qc-buttons button:hover {
+    transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.1);
+  }
+  
+  /* ─────────ـ المشاريع ────────── */
+  .portfolio-container {
+    max-width: 1200px;
+    padding: 2rem 1.5rem;
+    margin: 0 auto;
+  }
+  
+  .port-head .title {
+    font-size: 2.8rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .port-head .subtitle {
+    font-size: 1.2rem;
+    opacity: 0.8;
+  }
+  
+  .projects-grid {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+  }
+  
+  .project-card {
+    border-radius: 1.5rem;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: none;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .project-card:hover {
+    transform: translateY(-5px) scale(1.01);
+    border-color: rgba(255, 255, 255, 0.2);
+  }
+  
+  .card-header {
+    height: 220px;
+  }
+  
+  .card-body {
+    padding: 1.2rem;
+  }
+  
+  .card-title {
+    font-size: 1.8rem;
+  }
+  
+  .rating {
+    font-size: 1.2rem;
+  }
+  
+  .description {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  
+  .price-container {
+    gap: 1rem;
+  }
+  
+  .price-wrapper,
+  .normal-price {
+    padding: 0.6rem 1.2rem;
+    border-radius: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .original-price {
+    font-size: 1rem;
+  }
+  
+  .discounted-price,
+  .normal-price {
+    font-size: 1.5rem;
+  }
+  
+  .view-button {
+    padding: 0.6rem 1.5rem;
+    font-size: 1.1rem;
+    border-radius: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.05);
+  }
+  
+  .view-button:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
+  
+  /* تأثيرات إضافية للشاشات الكبيرة */
+  .floating-element {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+  
+  /* ────────── تحسين التحميل ────────── */
+  #loading-spinner {
+    padding-top: 15vh;
+  }
+  
+  .spinner-container {
+    max-width: 700px;
+    padding: 40px 30px;
+  }
+  
+  .spinner-title {
+    font-size: 2rem;
+  }
+  
+  .spinner-progress-container {
+    height: 25px;
+  }
+  
+  .spinner-status,
+  .spinner-percentage {
+    font-size: 0.9rem;
+  }
+  
+  /* تأثيرات بصرية إضافية للشاشات الكبيرة */
+  .parallax-section {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .glass-effect {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .gradient-border {
+    border: double 2px transparent;
+    background-image: linear-gradient(var(--section-bg), var(--section-bg)), 
+                      linear-gradient(45deg, var(--color-accent), var(--color-info));
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+  }
+  
+  /* تحسينات للرسوم المتحركة */
+  .fade-in-up {
+    animation: fadeInUp 0.8s ease-out;
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* تحسين التمرير السلس */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* تحسين شريط التمرير */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: var(--section-bg);
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-accent);
+    border-radius: 4px;
+    border: 2px solid var(--section-bg);
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-info);
+  }
+  
+  /* تأثيرات hover محسنة */
+  .interactive-element {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .interactive-element:hover {
+    transform: translateY(-2px);
+  }
+}
+
+/* ==================================================
+   5) من 1367px إلى 1600px — الشاشات الكبيرة جداً
+================================================== */
+@media only screen and (min-width: 1367px) and (max-width: 1600px) {
+  
+  /* ────────── قسم الترحيب ────────── */
+  #welcomeSection {
+    min-height: 25vh;
+    margin: 140px auto 3rem;
+    padding: 2.5rem;
+  }
+  
+  .welcome-text {
+    font-size: 2.8rem;
+    line-height: 1.4;
+    max-width: 75%;
+    padding: 2.5rem 0;
+  }
+  
+  .typing-line {
+    font-size: 3rem;
+    margin: 1rem 0;
+    line-height: 1.3;
+  }
+
+  section {
+    max-width: 1400px;
+    padding: 3rem 4rem;
+  }
+  
+  section h1 {
+    font-size: 3.2rem;
+  }
+  
+  .projects-grid {
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  }
+  
+  #skillsGrid,
+  #servicesGrid,
+  #contactGrid,
+  #statsGrid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+  
+  /* تحسين النافبار للشاشات الأكبر */
+  #nav-btn {
+    max-width: 650px;
+    padding: 1.3rem 2.8rem;
+  }
+  
+  #nav-btn button {
+    padding: 1.2rem 2rem;
+    font-size: 1.1rem;
+    min-width: 130px;
+  }
+}
+
+/* ==================================================
+   6) أكبر من 1600px — الشاشات الواسعة جداً
+================================================== */
+@media only screen and (min-width: 1601px) {
+  
+  /* ────────── قسم الترحيب ────────── */
+  #welcomeSection {
+    min-height: 28vh;
+    margin: 160px auto 4rem;
+    padding: 3rem;
+  }
+  
+  .welcome-text {
+    font-size: 3.2rem;
+    line-height: 1.4;
+    max-width: 70%;
+    padding: 3rem 0;
+  }
+  
+  .typing-line {
+    font-size: 3.5rem;
+    margin: 1.2rem 0;
+    line-height: 1.3;
+  }
+
+  body {
+    max-width: 1920px;
+    margin: 0 auto;
+    position: relative;
+  }
+  
+  #navsec {
+    max-width: 1920px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .main-sections-container {
+    max-width: 1800px;
+    margin: 0 auto;
+  }
+  
+  section {
+    max-width: 1600px;
+    padding: 4rem 5rem;
+  }
+  
+  section h1 {
+    font-size: 3.5rem;
+  }
+  
+  .projects-grid {
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    gap: 2.5rem;
+  }
+  
+  #skillsGrid,
+  #servicesGrid,
+  #contactGrid,
+  #statsGrid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+  
+  #nav-btn {
+    max-width: 700px;
+    padding: 1.5rem 3rem;
+  }
+  
+  #nav-btn button {
+    padding: 1.3rem 2.2rem;
+    font-size: 1.2rem;
+    min-width: 140px;
+  }
+  
+  /* تحسينات للشاشات الكبيرة جداً */
+  body::before {
+    height: 140px; /* مساحة أكبر للنافبار */
+  }
+  
+  #welcomeSection {
+    min-height: 35vh;
+    margin-top: 3rem;
+  }
+  
+  .welcome-text {
+    font-size: 2.8rem;
+    max-width: 80%;
+  }
+  
+  .typing-line {
+    font-size: 3rem;
+  }
+}
+
+/* ==================================================
+   7) تحسينات خاصة بالوضع الأفقي للهواتف
+================================================== */
+@media only screen and (max-width: 1024px) and (orientation: landscape) {
+  
+  /* ────────── قسم الترحيب ────────── */
+  #welcomeSection {
+    min-height: 15vh;
+    margin: 80px auto 1rem;
+    padding: 0.5rem;
+  }
+  
+  .welcome-text {
+    font-size: 1.8rem;
+    line-height: 1.3;
+    max-width: 90%;
+    padding: 0.5rem 0;
+  }
+  
+  .typing-line {
+    font-size: 2rem;
+    margin: 0.3rem 0;
+    line-height: 1.3;
+  }
+
+  body {
+    padding-top: 70px;
+  }
+  
+  #navsec {
+    padding: 0.3rem 0;
+    margin-bottom: 3rem;
+  }
+  
+  .promo-card {
+    max-width: 70%;
+    padding: 1.5rem;
+  }
+  
+  .chat-container {
+    max-width: 85%;
+    min-height: 300px;
+  }
+  
+  .chat-box {
+    min-height: 200px;
+  }
+  
+  #faqList {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  #skillsGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  #servicesGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .projects-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+
+/* ==================================================
+   8) تحسينات Nexus 10 والأجهزة اللوحية المتوسطة
+================================================== */
+@media only screen and (min-width: 801px) and (max-width: 1024px) and (orientation: portrait) {
+  
+  /* ────────── تحسينات عامة ────────── */
+  body {
+    font-size: 18px;
+    line-height: 1.6;
+    padding-top: 85px;
+  }
+
+  /* ────────── قسم الترحيب ────────── */
+  #welcomeSection {
+    min-height: 18vh;
+    margin: 85px auto 1.5rem;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .welcome-text {
+    font-size: 2.2rem;
+    line-height: 1.4;
+    max-width: 92%;
+    margin: 0;
+    padding: 1rem 0;
+    text-align: center;
+  }
+  
+  .typing-line {
+    font-size: 2.4rem;
+    letter-spacing: 0.8px;
+    font-weight: 600;
+    line-height: 1.4;
+    margin: 0.5rem 0;
+  }
+
+  /* ────────── النافبار ────────── */
+  #navsec {
+    padding: 0.6rem 0;
+    margin-bottom: 4rem;
+    height: auto;
+  }
+
+  #nav-btn {
+    max-width: 88%;
+    padding: 1rem 1.5rem;
+    gap: 1rem;
+    border-radius: 1.8rem;
+  }
+
+  #nav-btn button {
+    padding: 0.8rem 1.2rem;
+    font-size: 1rem;
+    min-width: 100px;
+    border-radius: 1.2rem;
+  }
+
+  #nav-btn button i {
+    font-size: 1.5rem;
+  }
+
+  #nav-btn button span {
+    font-size: 1.3rem;
+  }
+
+  /* ────────── باقي التحسينات ────────── */
+  .promo-section {
+    margin: 1rem auto;
+    padding: 1.2rem;
+  }
+
+  .promo-card {
+    max-width: 85%;
+    padding: 2rem 1.5rem;
+    border-radius: 2rem;
+  }
+
+  #promoTitle {
+    font-size: 2rem;
+    margin-bottom: 1.2rem;
+    font-weight: 700;
+  }
+
+  .discount-badge {
+    width: 60%;
+    font-size: 1.6rem;
+    padding: 0.9rem 1.2rem;
+    margin-bottom: 1.2rem;
+    border-radius: 1.5rem;
+  }
+
+  .time-block {
+    padding: 1rem 1.2rem;
+    gap: 1rem;
+    border-radius: 1.5rem;
+  }
+
+  .time-item span:first-child {
+    font-size: 2.5rem;
+  }
+
+  .time-label {
+    font-size: 1rem;
+    margin-top: 0.3rem;
+  }
+
+  .separator {
+    font-size: 2rem;
+  }
+
+  /* ────────── الدردشة الآلية ────────── */
+  .bot-sec {
+    margin: 2rem auto;
+    padding: 1.5rem;
+  }
+
+  .chat-container {
+    max-width: 92%;
+    min-height: 450px;
+    border-radius: 2rem;
+    padding: 1.2rem;
+  }
+
+  .chat-header {
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .bot-avatar {
+    width: 65px;
+    height: 65px;
+  }
+
+  .bot-info #bot-name {
+    font-size: 1.6rem;
+  }
+
+  .bot-status {
+    font-size: 1.1rem;
+  }
+
+  .chat-box {
+    min-height: 320px;
+    padding: 1rem;
+    border-radius: 1.2rem;
+  }
+
+  .message {
+    max-width: 80%;
+    padding: 0.9rem 1.1rem;
+    font-size: 1.1rem;
+    border-radius: 1rem;
+  }
+
+  .message.bot::before {
+    top: 12px;
+    left: -8px;
+  }
+
+  .message.user::after {
+    top: 12px;
+    right: -8px;
+  }
+
+  .chat-footer {
+    padding: 1rem 0.8rem;
+  }
+
+  .chat-input {
+    padding: 0.9rem 2.5rem;
+    font-size: 1.1rem;
+    border-radius: 1.8rem;
+  }
+
+  .send-btn,
+  .voice-btn {
+    font-size: 1.2rem;
+  }
+
+  .welcome-btn {
+    padding: 0.7rem 1rem;
+    font-size: 1rem;
+    margin: 0.3rem;
+    border-radius: 1rem;
+  }
+
+  /* ────────── الأسئلة الشائعة ────────── */
+  #faqSection {
+    margin: 2rem auto;
+    padding: 1.5rem;
+  }
+
+  #faqList {
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 1rem;
+  }
+
+  .faq-item .faq-btn {
+    padding: 1.2rem 0.8rem;
+    border-radius: 1.2rem;
+    aspect-ratio: 1/1;
+  }
+
+  .faq-btn i {
+    font-size: 2.2rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .faq-btn span {
+    font-size: 1.1rem;
+    line-height: 1.3;
+    font-weight: 600;
+  }
+
+  .answer-container {
+    padding: 1.2rem 1.5rem;
+    border-radius: 1.2rem;
+    margin-top: 1.2rem;
+    font-size: 1.2rem;
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* ────────── المهارات ────────── */
+  #skillsSection {
+    margin: 2rem auto;
+    padding: 1.5rem;
+  }
+
+  #skillsGrid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+  }
+
+  .skill-item {
+    padding: 1rem 0.8rem;
+    border-radius: 1.2rem;
+    aspect-ratio: 1/1;
+  }
+
+  .skill-item i {
+    font-size: 2.5rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .skill-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+  }
+
+  .skill-bar {
+    height: 0.8rem;
+    margin-top: 0.5rem;
+  }
+
+  .skill-percent {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  /* ─────────ـ المشاريع ────────── */
+  .portfolio-container {
+    padding: 2rem 1.5rem;
+    margin: 1.5rem auto;
+  }
+
+  .port-head .title {
+    font-size: 2.4rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .port-head .subtitle {
+    font-size: 1.3rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .project-card {
+    border-radius: 1.5rem;
+  }
+
+  .card-header {
+    height: 220px;
+  }
+
+  .card-body {
+    padding: 1rem;
+  }
+
+  .card-title {
+    font-size: 1.7rem;
+  }
+
+  .rating {
+    font-size: 1.3rem;
+  }
+
+  .description {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 0.5rem 0;
+  }
+
+  .tags-container {
+    padding: 0.5rem;
+    gap: 0.3rem;
+  }
+
+  .tag {
+    font-size: 0.85rem;
+    padding: 0.3rem 0.6rem;
+  }
+
+  .price-container {
+    gap: 0.8rem;
+    flex-wrap: nowrap;
+  }
+
+  .price-wrapper,
+  .normal-price {
+    padding: 0.6rem 1rem;
+    border-radius: 1rem;
+    min-width: 130px;
+  }
+
+  .original-price {
+    font-size: 1rem;
+  }
+
+  .discounted-price,
+  .normal-price {
+    font-size: 1.4rem;
+  }
+
+  .view-button {
+    padding: 0.6rem 1.2rem;
+    font-size: 1.1rem;
+    min-width: 130px;
+    border-radius: 1rem;
+  }
+
+  .discount-ribbon {
+    font-size: 0.9rem;
+    padding: 0.6rem 1rem;
+    top: 12px;
+  }
+}
+
+/* ==================================================
+   9) تأثيرات الخصم للمشاريع (ثابتة لجميع الأحجام)
+================================================== */
+.discount-ribbon {
+  position: absolute;
+  top: 15px;
+  right: -5px;
+  background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+  color: white;
+  padding: 8px 15px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  border-radius: 4px 0 0 4px;
+  box-shadow: 0 4px 12px rgba(255, 107, 107, 0.4);
+  z-index: 10;
+  animation: pulseDiscount 2s infinite;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.discount-ribbon::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  right: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid #c23616;
+  border-top: 5px solid #c23616;
+}
+
+@keyframes pulseDiscount {
+  0%, 100% {
+    box-shadow: 0 4px 12px rgba(255, 107, 107, 0.4);
+    transform: translateX(0);
+  }
+  50% {
+    box-shadow: 0 6px 20px rgba(255, 107, 107, 0.6);
+    transform: translateX(-2px);
+  }
+}
+
+.price-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  width: 100%;
+  flex-wrap: nowrap;
+}
+
+.price-comparison {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  flex: 1;
+  min-width: 0;
+}
+
+.price-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  background: color-mix(in srgb, var(--card-bg) 50%, black);
+  padding: 0.5rem 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  position: relative;
+  overflow: hidden;
+  border: none;
+  min-width: 120px;
+  justify-content: center;
+}
+
+.original-price {
+  color: var(--card-color);
+  font-size: 1.2rem;
+  font-weight: 600;
+  position: relative;
+  opacity: 0.8;
+}
+
+.original-price::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: -5%;
+  width: 110%;
+  height: 3px;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    #e74c3c 20%, 
+    #e74c3c 80%, 
+    transparent 100%);
+  transform: translateY(-50%);
+}
+
+.discounted-price {
+  color: var(--card-color);
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.normal-price {
+  color: var(--card-color);
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  padding: 0.5rem 1.5rem;
+  border-radius: 1rem;
+  background: color-mix(in srgb, var(--card-bg) 50%, black);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  position: relative;
+  overflow: hidden;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 120px;
+}
+
+.price-wrapper::before,
+.normal-price::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255,255,255,0.6),
+    transparent
+  );
+  transform: skewX(-20deg);
+  animation: shimmer 10s ease-in-out infinite;
+}
+
+/* تأثيرات hover */
+.price-wrapper:hover,
+.normal-price:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
+}
+
+.view-button {
+  padding: 0.5rem 2rem;
+  text-decoration: none;
+  border-radius: 1rem;
+  font-size: 1.3rem;
+  background: color-mix(in srgb, var(--card-bg) 50%, black) !important;
+  color: var(--card-color);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-width: 140px;
+  flex-shrink: 0;
+}
+
+.view-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255,255,255,0.6),
+    transparent
+  );
+  transform: skewX(-20deg);
+  animation: shimmer 10s ease-in-out infinite;
+}
+
+.view-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
+}
+
+/* تحسينات للعرض على الشاشات الصغيرة */
+@media only screen and (max-width: 480px) {
+  .discount-ribbon {
+    font-size: 0.8rem;
+    padding: 6px 10px;
+    top: 10px;
+  }
+  
+  .price-container {
+    flex-direction: row;
+    gap: 0.8rem;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .price-comparison {
+    gap: 0.5rem;
+    flex: 1;
+    min-width: 0;
+  }
+  
+  .price-wrapper {
+    padding: 0.3rem 1rem;
+    min-width: 100px;
+    gap: 0.5rem;
+  }
+  
+  .original-price {
+    font-size: 1rem;
+  }
+  
+  .discounted-price {
+    font-size: 1.4rem;
+  }
+  
+  .normal-price {
+    font-size: 1.4rem;
+    padding: 0.3rem 1rem;
+    min-width: 100px;
+  }
+  
+  .view-button {
+    padding: 0.5rem 1.2rem;
+    font-size: 1.1rem;
+    min-width: 120px;
+  }
+}
+
+/* تأثيرات hover إضافية */
+.project-card:hover .price-wrapper,
+.project-card:hover .normal-price,
+.project-card:hover .view-button {
+  transform: translateY(-2px);
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover .discount-ribbon {
+  animation: pulseDiscount 1s infinite;
+}
+
+/* ==================================================
+   10) تحسينات أداء عامة
+================================================== */
+
+/* تحسين أداء التحويلات */
+.skill-item,
+.services-item,
+.contact-card,
+.stats-item,
+.faq-item,
+.project-card {
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* تحسين التمرير */
+.chat-box {
+  -webkit-overflow-scrolling: touch;
+}
+
+/* تحسين جودة الصور */
+.carousel-slide img {
+  image-rendering: -webkit-optimize-contrast;
+}
+
+/* منع التكبير التلقائي على الحقول */
+input, textarea, select {
+  font-size: 16px !important;
+}
+
+/* التأكد من أن الشبكات تعمل بشكل صحيح */
+.skills-grid,
+.services-grid,
+.contact-grid,
+.stats-grid {
+  display: grid !important;
+  gap: 0.4rem ;
+}
+
+/* ────────────────────────────────────────────────── */
+/* تخطيط متقدم للصفحة الرئيسية على الشاشات الكبيرة */
+/* ────────────────────────────────────────────────── */
+
+@media only screen and (min-width: 1200px) {
+  .homepage-grid {
+    display: grid;
+    grid-template-areas:
+      "welcome welcome"
+      "promo   promo"
+      "bot     stats"
+      "skills  services"
+      "about   contact"
+      "faq     quick";
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+  
+  #welcomeSection { 
+    grid-area: welcome; 
+    margin-top: 120px;
+    min-height: 20vh;
+  }
+  #promosection   { grid-area: promo; }
+  #botsection     { grid-area: bot; }
+  #statsSection   { grid-area: stats; }
+  #skillsSection  { grid-area: skills; }
+  #servicesSection { grid-area: services; }
+  #aboutSection   { grid-area: about; }
+  #contactSection { grid-area: contact; }
+  #faqSection     { grid-area: faq; }
+  #quickContactSection { grid-area: quick; }
+}
+
+/* تحسينات الاستجابة للشاشات العريضة جداً */
+@media only screen and (min-width: 2000px) {
+  body {
+    max-width: 1920px;
+    margin: 0 auto;
+    position: relative;
+  }
+  
+  #navsec {
+    max-width: 1920px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .main-sections-container {
+    max-width: 1800px;
+    margin: 0 auto;
+  }
+}
+
+/* تحسينات خاصة بالطباعة */
+@media print {
+  /* إضافة أنماط الطباعة هنا عند الحاجة */
+}
+
+/* ────────── تحسينات التباعد والمسافات ────────── */
+@media only screen and (min-width: 1025px) {
+  .main-section:first-of-type {
+    margin-bottom: 5rem;
+  }
+  
+  /* تحسين تباعد الأقسام */
+  section {
+    margin: 3rem auto;
+    padding: 2rem 1.5rem;
+  }
+}
